@@ -70,4 +70,12 @@ describe('Favourite', () => {
     const result = listHelper.favoriteBlog(blogs)
     expect(result).toEqual(blogs[2])
   })
+  test('Most blogs', () => {
+    const result = listHelper.mostBlogs(blogs)
+    expect(result).toEqual({"author": "Robert C. Martin", "blogs": 3})
+  })
+  test('Most likes', () => {
+    const result = listHelper.mostLikes(blogs)
+    expect(result).toEqual(17)
+  })
 })
